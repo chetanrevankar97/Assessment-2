@@ -1,23 +1,17 @@
 import { Injectable } from '@angular/core';
-import {Book} from './book';
-import {Review} from './review';
+import{Employee} from './employee';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  array=[];
-  books:Book[]=[];
+  employees:Employee[]=[];
 
-  reviews:Review[]=[];
   constructor() { }
 
-  create(b:Book)
+  create(b:Employee)
   {
-    this.books.push(b);
+    this.employees.push(b);
   }
-  createReview(r:Review){
-    this.reviews.push(r);
-    this.array.push(this.reviews);
-  }
+  
 }

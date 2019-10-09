@@ -1,20 +1,20 @@
 <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Price</th>
+            <th scope="col">Name</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let a of books">
-            <th scope="row">{{a.id}}</th>
-            <td>{{a.title}}</td>
-            <td>{{a.author}}</td>
-            <td>{{a.price}}</td>
-            <td><button type="submit" routerLink="/addreview">Add Review</button></td>
-            <td><button type="submit" routerLink="/viewreview">Read Review</button></td>
+          <tr *ngFor="let a of employees">
+            <th scope="row">{{a.name}}</th>
+            <td>{{a.date}}</td>
+            <td>{{a.address}}</td>
+            <td>{{a.phone}}</td>
+            <td><button type="submit" routerLink="/edit">Edit</button></td>
+            <td><button type="submit" routerLink="/delete">Delete</button></td>
           </tr>
           
         </tbody>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../book';
+import {Employee} from '../employee'
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,19 +8,19 @@ import { DataService } from '../data.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-    id:number;
-    author:string;
-    title:string;
-    price:number;
-    newbook:Book;
+    name:string;
+    date:Date;
+    address:string;
+    phone:number;
+    newemployee:Employee;
   constructor(private svc:DataService) { }
 
   ngOnInit() {
   }
 
-  createBook(){
-    this.newbook=new Book(this.id,this.title,this.author,this.price);
-    this.svc.create(this.newbook);
+  createEmployee(){
+    this.newemployee=new Employee(this.name,this.date,this.address,this.phone);
+    this.svc.create(this.newemployee);
   }
 
 }

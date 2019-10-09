@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import {Book} from '../book';
+import {Employee} from '../employee';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +8,11 @@ import {Book} from '../book';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  books:Book[]=[];
+  employees:Employee[]=[];
   constructor(public svc:DataService) { }
 
   ngOnInit() {
-    this.books=this.svc.books;
+    this.employees=this.svc.employees;
   }
 
 }
